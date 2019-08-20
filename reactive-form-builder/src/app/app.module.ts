@@ -1,16 +1,16 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { ReactiveFormsModule } from '@angular/forms';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeroValidationComponent } from './hero-validation/hero-validation.component';
+import { VoterProfileEditorComponent } from './voter-profile-editor/voter-profile-editor.component';
+
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeroValidationComponent
+    VoterProfileEditorComponent
   ],
   imports: [
     BrowserModule,

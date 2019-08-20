@@ -1,0 +1,20 @@
+<form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+  <div>
+     <input id="ug" type="radio" value="ug" name="graduate" formControlName="graduate">
+     <label class="custom-control-label" for="ug">UG</label>
+  </div>
+
+  <div>
+     <input id="pg" type="radio" value="pg" name="graduate" formControlName="graduate">
+     <label class="custom-control-label" for="graduate">Graduate</label>
+  </div>
+
+  
+  <div *ngIf="isSubmitted && myForm.errors?.required">
+     <p>Please select either value</p>
+  </div>
+  
+  <button type="submit">Submit</button>
+</form>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,53 @@
+
+<form [formGroup]="studentProfileForm" (ngSubmit)="onSubmit()">
+    
+    <label>
+        Roll Number:
+        <input type="text" formControlName="rollNumber">
+      </label>
+
+      <br><br>
+    <label>
+      First Name:
+      <input type="text" formControlName="firstName">
+    </label>
+
+    <div formGroupName="subjects">
+        <h4>Subjects</h4>
+      
+        <label>
+          Maths:
+          <input type="text" formControlName="maths">
+        </label>
+        
+        <br><br>
+        <label>
+          Science:
+          <input type="text" formControlName="science">
+        </label>
+        
+        <br><br>
+        <label>
+          Social:
+          <input type="text" formControlName="social">
+        </label>
+      
+        <br><br>
+        <label>
+          English:
+          <input type="text" formControlName="english">
+        </label>
+
+        <br><br>
+        <label>
+            Tamil:
+            <input type="text" formControlName="tamil">
+          </label>
+      </div>
+
+    <br><br>
+    <button type="submit" [disabled]="!studentProfileForm.valid">Submit</button>
+     <br><br> 
+    <button type="upadte" (click)="upadteStudent()">Update</button>
+
+  </form>
